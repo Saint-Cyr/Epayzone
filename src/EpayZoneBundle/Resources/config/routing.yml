@@ -1,0 +1,3 @@
+epay_zone_homepage:
+    path:     /
+    defaults: { _controller: EpayZoneBundle:Default:index }

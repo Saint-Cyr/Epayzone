@@ -1,0 +1,11 @@
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+<<<<<<< HEAD
+/var/logs/
+/app/config/parameters.yml
+/phpunit.xml
+/vendor/
+/web/bundles/
+=======
+>>>>>>> development
+/nbproject/private/

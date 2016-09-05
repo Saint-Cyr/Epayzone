@@ -1,0 +1,8 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<h2> Custom profile template </h2>
+
+<div class="fos_user_user_show">
+    <p><a href="{{ path('user_remove_self', {'id':user.id}) }}">{{ 'remove my account'|trans }}</a></p>
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+</div>

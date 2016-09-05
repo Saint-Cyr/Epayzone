@@ -1,0 +1,7 @@
+user_vendor_registration:
+   path:     /vendor-registration
+   defaults: { _controller: UserBundle:Default:vendorRegistration }
+   
+user_remove_self:
+    path:    /user/remove/{id}
+    defaults: { _controller: UserBundle:Default:remove }

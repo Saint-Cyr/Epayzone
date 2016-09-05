@@ -1,0 +1,30 @@
+EpayZoneBundle\Entity\Region:
+       region1:
+           name: Greater Accra
+
+EpayZoneBundle\Entity\Constituency:
+        constituency1:
+            name: Constituency 1
+            region: "@region1"
+
+        constituency2:
+            name: Consituency 2
+            region: "@region1"
+
+        consituency3:
+            name: Constituency 3
+            region: "@region1"
+
+UserBundle\Entity\User:
+        super_admin:
+            username: super-admin
+            plainPassword: test
+            email: super-admin@domain.com
+            enabled: true
+            roles: [ROLE_ADMIN]
+
+EpayZoneBundle\Entity\PaymentModeType:
+        payment_type1:
+            amount: 10.30
+
+EpayZoneBundle\Entity\Payment

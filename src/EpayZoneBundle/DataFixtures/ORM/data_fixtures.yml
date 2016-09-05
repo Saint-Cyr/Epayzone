@@ -1,0 +1,54 @@
+EpayZoneBundle\Entity\Region:
+       region1:
+           name: Greater Accra
+            
+UserBundle\Entity\User:
+    super_admin:
+        username: super-admin
+        email: super-admin@domain.com
+        plainPassword: test
+        roles: [ROLE_SUPER_ADMIN]
+        enabled: true
+    super_admin2:
+        username: super-admin2
+        email: super-admin2@domain.com
+        plainPassword: test
+        roles: [ROLE_SUPER_ADMIN]
+        enabled: true
+    admin:
+        username: admin
+        email: admin@domain.com
+        plainPassword: test
+        roles: [ROLE_ADMIN]
+        enabled: true
+    admin2:
+        username: admin2
+        email: admin2@domain.com
+        plainPassword: test
+        roles: [ROLE_ADMIN]
+        enabled: true
+    vendor:
+        username: vendor
+        email: vendor@domain.com
+        plainPassword: test
+        roles: [ROLE_VENDOR]
+        enabled: true
+    vendor2:
+        username: vendor2
+        email: vendor2@domain.com
+        plainPassword: test
+        roles: [ROLE_VENDOR]
+        enabled: true
+    customer:
+        username: customer
+        email: customer@domain.com
+        plainPassword: test
+        roles: [ROLE_CUSTOMER]
+        enabled: true
+    customer2:
+        username: customer2
+        email: customer2@domain.com
+        plainPassword: test
+        roles: [ROLE_CUSTOMER]
+        enabled: true
+        

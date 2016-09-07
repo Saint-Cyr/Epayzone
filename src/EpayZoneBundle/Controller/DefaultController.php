@@ -3,6 +3,7 @@
 namespace EpayZoneBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
@@ -22,6 +23,12 @@ class DefaultController extends Controller
             var_dump('----ROLE_CHECKING OK-----');
         }
         
-        return new Response('----index page----');
+        return $this->render('admin/pages/plain.html.twig');
+    }
+    
+    
+    public function vendorDashboardAction()
+    {
+        return $this->render('/admin/vendor_dashboard.html.twig');
     }
 }

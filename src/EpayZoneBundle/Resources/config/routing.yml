@@ -1,3 +1,15 @@
 epay_zone_homepage:
     path:     /
     defaults: { _controller: EpayZoneBundle:Default:index }
+    
+epay_zone_vendor_dashboard:
+    path:    /vendor/dashboard
+    defaults: { _controller: EpayZoneBundle:Default:vendorDashboard }
+    
+gentelella_page:
+    path:    /page
+    defaults: { _controller: EpayZoneBundle:Default:vendorDashboard }
+    
+admin_page:
+    path:    /page
+    defaults: { _controller: EpayZoneBundle:Default:vendorDashboard }

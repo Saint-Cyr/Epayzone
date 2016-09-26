@@ -1,8 +1,8 @@
-epay_zone_homepage:
+epayzone_homepage:
     path:     /
     defaults: { _controller: EpayZoneBundle:Default:index }
     
-epay_zone_vendor_dashboard:
+epayzone_vendor_dashboard:
     path:    /vendor/dashboard
     defaults: { _controller: EpayZoneBundle:Default:vendorDashboard }
     
@@ -13,3 +13,7 @@ gentelella_page:
 admin_page:
     path:    /page
     defaults: { _controller: EpayZoneBundle:Default:vendorDashboard }
+    
+epayzone_dashboard:
+    path:    /epayzone/dashboard
+    defaults: { _controller: EpayZoneBundle:Default:epayZoneDashboard }

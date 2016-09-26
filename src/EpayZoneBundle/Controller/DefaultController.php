@@ -9,26 +9,18 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     public function indexAction()
-    {
-        $mailer = $this->get('mailer');
-        
-        $message = \Swift_Message::newInstance()
-                ->setSubject('subject for test')
-                ->setFrom('mapoukacyr@gmail.com')
-                ->setTo('mapoukacyr@yahoo.fr')
-                ->setBody('content for test purpose');
-        
-        //$mailer->send($message);
-        if($this->isGranted('ROLE_VENDOR')){
-            var_dump('----ROLE_CHECKING OK-----');
-        }
-        
-        return $this->render('admin/pages/plain.html.twig');
+    {   
+        return $this->render('EpayZoneBundle:Default:index.html.twig');
     }
     
     
     public function vendorDashboardAction()
     {
         return $this->render('/admin/vendor_dashboard.html.twig');
+    }
+    
+    public function epayZoneDashboardAction()
+    {
+        return $this->render('/admin/epayzone_dashboard.html.twig');
     }
 }

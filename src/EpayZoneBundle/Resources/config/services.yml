@@ -1,7 +1,16 @@
 services:
-#    epay_zone.example:
-#        class: EpayZoneBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    epay_zone.password_reseting:
+        class: EpayZoneBundle\EventListener\PasswordResettingListener
+        arguments: ["@router"]
+        tags:
+            - { name: kernel.event_subscriber }
+            
+    epay_zone.registration_sucess:
+        class: EpayZoneBundle\EventListener\RegistrationListener
+        arguments: ["@router"]
+        tags:
+            - { name: kernel.event_subscriber }
+
     epay_zone.admin.transaction:
         class: EpayZoneBundle\Admin\TransactionAdmin
         arguments: [~, EpayZoneBundle\Entity\Transaction, SonataAdminBundle:CRUD]

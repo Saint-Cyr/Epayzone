@@ -34,6 +34,8 @@ security:
     
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/vendor/dashboard, role: ROLE_VENDOR }
+        - { path: ^/admin/dashboard, role: ROLE_ADMIN }
         #- { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         #- { path: ^/admin/, role: ROLE_ADMIN }

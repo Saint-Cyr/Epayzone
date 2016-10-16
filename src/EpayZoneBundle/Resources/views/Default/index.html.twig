@@ -63,8 +63,13 @@
                                 <div class="carousel-content">
                                     <h2 class="animation animated-item-1"><span>Epayzone</span></h2>
                                     <p class="animation animated-item-2">The most fast, easer and secure electronique payment zone in Africa...</p>
-                                    <a class="btn-slide animation animated-item-3" href="#">Sign-up</a>
-                                    <a class="btn-slide animation animated-item-3" href="#">Login</a>
+                                    {% if app.user %}
+                                        <a class="btn-slide animation animated-item-3" href="{{ path('fos_user_security_logout') }}">Logout</a>
+                                    {% else %}
+                                        <a class="btn-slide animation animated-item-3" href="{{ path('fos_user_registration_register') }}">Sign-up</a>
+                                        <a class="btn-slide animation animated-item-3" href="{{ path('fos_user_security_login') }}">Login</a>
+                                    {% endif %}
+                                    
                                 </div>
                             </div>
 

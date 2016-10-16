@@ -24,6 +24,8 @@ parameters:
 sonata_block:
     default_contexts: [cms]
     blocks:
+        sonata.admin.block.search_result:
+            contexts: [admin]
         sonata.admin.block.admin_list:
             contexts: [admin]
 

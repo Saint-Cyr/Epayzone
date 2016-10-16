@@ -51,4 +51,67 @@ UserBundle\Entity\User:
         plainPassword: test
         roles: [ROLE_CUSTOMER]
         enabled: true
+    vodafone:
+        username: Vodafone
+        email: vodafone@domain.com
+        plainPassword: test
+        roles: [ROLE_VENDOR]
+        enabled: true
+    mtn:
+        username: Mtn
+        email: mtn@domain.com
+        plainPassword: test
+        roles: [ROLE_VENDOR]
+        enabled: true
+    tigo:
+        username: Tigo
+        email: tigo@domain.com
+        plainPassword: test
+        roles: [ROLE_VENDOR]
+        enabled: true
+    airtel:
+        username: Airtel
+        email: airtel@domain.com
+        plainPassword: test
+        roles: [ROLE_VENDOR]
+        enabled: true
+
+EpayZoneBundle\Entity\Service:
+    vodafone_cash:
+        name: Vodafone cash
+        user: "@vodafone"
+        serviceCategory: "@mobile_money"
+    mtn_money:
+        name: MTN money
+        user: "@mtn"
+        serviceCategory: "@mobile_money"
+    tigo_cash:
+        name: Tigo cash
+        user: "@tigo"
+        serviceCategory: "@mobile_money"
+    airtel_money:
+        name: Airtel Money
+        user: "@airtel"
+        serviceCategory: "@mobile_money"
+    vodafone_airtime:
+        name: Vodafone airtime
+        user: "@vodafone"
+        serviceCategory: "@airtime"
+    mtn_airtime:
+        name: MTN airtime
+        user: "@mtn"
+        serviceCategory: "@airtime"
+    tigo_airtime:
+        name: Tigo airtime
+        user: "@tigo"
+        serviceCategory: "@airtime"
+    airtel_airtime:
+        name: Airtel aitime
+        user: "@airtel"
+        serviceCategory: "@airtime"
         
+EpayZoneBundle\Entity\ServiceCategory:
+    airtime:
+        name: Airtime
+    mobile_money:
+        name: Mobile Money

@@ -58,6 +58,10 @@ class Service
     {
         return $this->id;
     }
+    
+    public function __construct() {
+        $this->setCreatedAt(new \DateTime("now"));
+    }
 
     /**
      * Set name

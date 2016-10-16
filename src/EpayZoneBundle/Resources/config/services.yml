@@ -15,28 +15,28 @@ services:
         class: EpayZoneBundle\Admin\TransactionAdmin
         arguments: [~, EpayZoneBundle\Entity\Transaction, SonataAdminBundle:CRUD]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: Transaction }
+            - { name: sonata.admin, manager_type: orm, group: Admin, label: Transaction }
 
     epay_zone.admin.payment_mode:
         class: EpayZoneBundle\Admin\PaymentModeAdmin
         arguments: [~, EpayZoneBundle\Entity\PaymentMode, SonataAdminBundle:CRUD]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: PaymentMode }
+            - { name: sonata.admin, manager_type: orm, group: Admin, label: PaymentMode }
 
     epay_zone.admin.region:
         class: EpayZoneBundle\Admin\RegionAdmin
         arguments: [~, EpayZoneBundle\Entity\Region, SonataAdminBundle:CRUD]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: Region }
+            - { name: sonata.admin, manager_type: orm, group: Admin, label: Region }
 
     epay_zone.admin.payment_mode_type:
         class: EpayZoneBundle\Admin\PaymentModeTypeAdmin
         arguments: [~, EpayZoneBundle\Entity\PaymentModeType, EpayZoneBundle:PaymentModeTypeAdmin]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: PaymentModeType }
+            - { name: sonata.admin, manager_type: orm, group: Admin, label: PaymentModeType }
 
     epay_zone.admin.constituency:
         class: EpayZoneBundle\Admin\ConstituencyAdmin
         arguments: [~, EpayZoneBundle\Entity\Constituency, SonataAdminBundle:CRUD]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: Constituency }
+            - { name: sonata.admin, manager_type: orm, group: Admin, label: Constituency }

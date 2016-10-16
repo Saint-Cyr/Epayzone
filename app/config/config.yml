@@ -28,6 +28,14 @@ sonata_block:
             contexts: [admin]
 
 sonata_admin:
+    dashboard:
+        blocks:
+            - { position: left, type: sonata.admin.block.admin_list, settings: {groups: [Admin]} }
+            - { position: right, type: sonata.admin.block.admin_list, settings: {groups: [Security]} }
+    title: EpayZone
+    title_logo: images/logo.png
+    templates:
+        layout: EpayZoneBundle::standard_layout.html.twig
     security:
       handler: sonata.admin.security.handler.role
 

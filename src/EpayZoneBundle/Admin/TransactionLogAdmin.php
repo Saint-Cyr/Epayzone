@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class PaymentModeTypeAdmin extends AbstractAdmin
+class TransactionLogAdmin extends AbstractAdmin
 {
     /**
      * @param DatagridMapper $datagridMapper
@@ -17,7 +17,8 @@ class PaymentModeTypeAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('id')
-            ->add('name')
+            ->add('description')
+            ->add('type')
             ->add('createdAt')
         ;
     }
@@ -29,7 +30,8 @@ class PaymentModeTypeAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('id')
-            ->add('name')
+            ->add('description')
+            ->add('type')
             ->add('createdAt')
             ->add('_action', null, array(
                 'actions' => array(
@@ -48,7 +50,8 @@ class PaymentModeTypeAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('id')
-            ->add('name')
+            ->add('description')
+            ->add('type')
             ->add('createdAt')
         ;
     }
@@ -60,7 +63,8 @@ class PaymentModeTypeAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('id')
-            ->add('name')
+            ->add('description')
+            ->add('type')
             ->add('createdAt')
         ;
     }

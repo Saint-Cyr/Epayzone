@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class ConstituencyAdmin extends AbstractAdmin
+class ServiceAdmin extends AbstractAdmin
 {
     /**
      * @param DatagridMapper $datagridMapper
@@ -17,6 +17,7 @@ class ConstituencyAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('name')
+            ->add('serviceCategory')
         ;
     }
 
@@ -27,8 +28,8 @@ class ConstituencyAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('name')
-            ->add('region')
-            ->add('createdAt')
+            ->add('serviceCategory')
+            ->add('user', null, array('label' => 'Vendor'))
             ->add('_action', null, array(
                 'actions' => array(
                     'show' => array(),
@@ -46,7 +47,7 @@ class ConstituencyAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('name')
-            ->add('createdAt')
+            ->add('user')
         ;
     }
 

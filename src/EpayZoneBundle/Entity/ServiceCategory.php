@@ -50,6 +50,11 @@ class ServiceCategory
     {
         return $this->id;
     }
+    
+    public function __toString() {
+        return $this->name;
+    }
+    
 
     /**
      * Set name
@@ -103,6 +108,7 @@ class ServiceCategory
      */
     public function __construct()
     {
+        $this->setCreatedAt(new \DateTime("now"));
         $this->services = new \Doctrine\Common\Collections\ArrayCollection();
     }
 

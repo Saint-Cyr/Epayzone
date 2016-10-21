@@ -35,6 +35,11 @@ class InitFixturesTest extends WebTestCase
     
     public function testInit()
     {
+        $this->init();
+    }
+    
+    public function init()
+    {
         //Step 1: drop the DB.
         $command = new DropDatabaseDoctrineCommand();
         $this->application->add($command);

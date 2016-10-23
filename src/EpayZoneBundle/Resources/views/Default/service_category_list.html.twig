@@ -53,77 +53,65 @@
 		</nav>		
 	</header>
 	
-	<section id="main-slider" class="no-margin">
-        <div class="carousel slide">      
-            <div class="carousel-inner">
-                <div class="item active" style="background-image: url({{ asset('images/slider/bg1.jpg') }})">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h2 class="animation animated-item-1"><span>Epayzone</span></h2>
-                                    <p class="animation animated-item-2">The fastest, easiest and most secure electronic payment zone in Africa...</p>
-                                    {% if app.user %}
-                                        <a class="btn-slide animation animated-item-3" href="{{ path('fos_user_security_logout') }}">Logout</a>
-                                    {% else %}
-                                        <a class="btn-slide animation animated-item-3" href="{{ path('fos_user_registration_register') }}">Sign-up</a>
-                                        <a class="btn-slide animation animated-item-3" href="{{ path('fos_user_security_login') }}">Login</a>
-                                    {% endif %}
-                                    
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="{{ asset('images/epay.png') }}" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->             
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-    </section><!--/#main-slider-->
 	
-	<div class="feature">
+	
+	<div class="about">
+		
+	</div>
+	
+	<div class="lates">
 		<div class="container">
 			<div class="text-center">
-				<div class="col-md-3">
-					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" >
-						<i class="fa fa-book"></i>	
-						<h2>Faster</h2>
-						<p>Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" >
-						<i class="fa fa-laptop"></i>	
-						<h2>Easier</h2>
-						<p>Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" >
-						<i class="fa fa-heart-o"></i>	
-						<h2>Secure</h2>
-						<p>Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" >
-						<i class="fa fa-cloud"></i>	
-						<h2>...More</h2>
-						<p>Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.</p>
-					</div>
-				</div>
+				<h2>{{ serviceCategory.name }} </h2>
 			</div>
+                    {% for service in serviceCategory.services %}
+                        <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<img src="{{ asset('upload/service/'~service.image) }}" class="img-responsive"/>
+				<h3>{{ service.name }}</h3>
+				<p>
+				</p>
+			</div>
+                    {% endfor %}
+			
 		</div>
 	</div>
 	
+	<section id="partner">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Our Partners</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>    
+
+            <div class="partners">
+                <ul>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="{{ asset('images/partners/partner1.png') }}"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="{{ asset('images/partners/partner2.png') }}"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="{{ asset('images/partners/partner3.png') }}"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="{{ asset('images/partners/partner4.png') }}"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="{{ asset('images/partners/partner5.png') }}"></a></li>
+                </ul>
+            </div>        
+        </div><!--/.container-->
+    </section><!--/#partner-->
 	
-	
-	
+	<section id="conatcat-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="pull-left">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="media-body">
+                            <h2>Have a question or need a custom quote?</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70 80</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->    
+    </section><!--/#conatcat-info-->
 	
 	<footer>
 		<div class="footer">
@@ -142,7 +130,7 @@
 				
 				<div class="col-md-4 col-md-offset-4">
 					<div class="copyright">
-						&copy;   2017 by <a target="_blank" href="http://yamegroup.com/" title="Yame Group">Yame Group</a>. All Rights Reserved.
+						&copy; June  2015 by <a target="_blank" href="http://bootstraptaste.com/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Bootstrap Themes</a>. All Rights Reserved.
 					</div>
                     <!-- 
                         All links in the footer should remain intact. 

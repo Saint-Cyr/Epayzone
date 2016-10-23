@@ -17,3 +17,11 @@ admin_page:
 epayzone_dashboard:
     path:    /epayzone/dashboard
     defaults: { _controller: EpayZoneBundle:Default:epayZoneDashboard }
+    
+epayzone_transfer:
+    path: /epayzone-transfer
+    defaults: { _controller: EpayZoneBundle:Default:Services }
+
+epayzone_service_category:
+    path: /epayzone-service-category/{id}
+    defaults: { _controller: EpayZoneBundle:Default:ServiceCategory }

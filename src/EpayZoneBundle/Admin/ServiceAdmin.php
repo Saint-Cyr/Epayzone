@@ -27,6 +27,7 @@ class ServiceAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
+            ->add('image', null, array('template' => 'EpayZoneBundle:Default:service_list.html.twig'))
             ->add('name')
             ->add('serviceCategory')
             ->add('user', null, array('label' => 'Vendor'))
@@ -45,9 +46,13 @@ class ServiceAdmin extends AbstractAdmin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
+        $option = (preg_match('/_edit$/', $this->getRequest()->get('_route'))) ? false : true;
         $formMapper
+        ->with('Details', array('class' => 'col-md-6'))
             ->add('name')
             ->add('user')
+            ->add('file', 'file', array('required' => $option))
+        ->end();
         ;
     }
 
@@ -61,5 +66,22 @@ class ServiceAdmin extends AbstractAdmin
             ->add('name')
             ->add('createdAt')
         ;
+    }
+    
+    public function prePersist($image)
+    {
+        $this->manageFileUpload($image);
+    }
+
+    public function preUpdate($image)
+    {
+        $this->manageFileUpload($image);
+    }
+
+    private function manageFileUpload($image)
+    {
+        if ($image->getFile()) {
+            $image->refreshUpdated();
+        }
     }
 }

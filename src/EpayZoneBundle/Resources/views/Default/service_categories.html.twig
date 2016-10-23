@@ -1,0 +1,3 @@
+{% for serviceCategory in serviceCategories %}
+    <li role="presentation" ><a href="{{ path('epayzone_service_category', {'id':serviceCategory.id}) }}">{{ serviceCategory.name }}</a></li>
+{% endfor %}
